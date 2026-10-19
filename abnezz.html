@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض تقديمي - تطوير موقع لمطعم ابن عز</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #d90429;
+            --secondary-color: #ef233c;
+            --dark-color: #14213d;
+            --light-color: #f8f9fa;
+            --accent-color: #fca311;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(20, 33, 61, 0.85), rgba(20, 33, 61, 0.85)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+
+        /* Container & Titles */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Grid System */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .stat-item h2 {
+            font-size: 2.8rem;
+            color: var(--accent-color);
+        }
+
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            background-color: #fff;
+            padding: 60px 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 40px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--dark-color);
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>رؤية رقمية جديدة لمطاعم "ابن عز"</h1>
+        <p>تحويل التواجد الرقمي لفروعكم إلى أداة أساسية لزيادة المبيعات المباشرة وتعزيز ولاء العملاء</p>
+        <a href="#digital-importance" class="btn-main">استكشف العرض التقديمي</a>
+    </header>
+
+    <!-- Section 1: Digital Importance & Sales -->
+    <section id="digital-importance" class="container">
+        <h2 class="section-title">لماذا يحتاج "ابن عز" إلى موقع إلكتروني مخصص؟</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>1. التخلص من عمولات تطبيقات التوصيل</h3>
+                <p>تطبيقات التوصيل تأخذ عمولات تصل إلى 20-30%. موقعكم الخاص يضمن لكم استلام الطلبات مباشرة بدون أي عمولات استقطاعية.</p>
+            </div>
+            <div class="card">
+                <h3>2. التحكم الكامل في بيانات العملاء</h3>
+                <p>بناء قاعدة بيانات دقيقة لعملاء فروعكم (الأرقام، العناوين، الأكلات المفضلة) لإعادة استهدافهم بالحملات والخصومات.</p>
+            </div>
+            <div class="card">
+                <h3>3. زيادة متوسط قيمة الطلب (Upselling)</h3>
+                <p>عرض المنيو التفاعلي الذكي يساعد في اقتراح إضافة (مقبلات، مشروبات، حلويات) أثناء طلب العميل مما يرفع قيمة الفاتورة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Highlight -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h2>+35%</h2>
+                <p>زيادة في طلبات الأونلاين المباشرة</p>
+            </div>
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>ملكيكتكم الكاملة لبيانات العملاء</p>
+            </div>
+            <div class="stat-item">
+                <h2>0%</h2>
+                <p>عمولات لوسطاء التوصيل</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Our Unique Features -->
+    <section class="container">
+        <h2 class="section-title">مميزاتنا الخاصة التي تميزنا عن أي منافس</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>نظام طلب ذكي متعدد الفروع</h3>
+                <p>توجيه طلب العميل تلقائياً لأقرب فرع من فروع "ابن عز" بناءً على موقع العميل الجغرافي لضمان أسرع توصيل.</p>
+            </div>
+            <div class="card">
+                <h3>ربط مباشر مع أنظمة الكاشير (POS)</h3>
+                <p>إمكانية ربط الموقع بنظام إدارة المطعم لديك لتدفق الطلبات مباشرة للمطبخ دون الحاجة لإدخالها يدوياً.</p>
+            </div>
+            <div class="card">
+                <h3>برنامج ولاء ومكافآت (Loyalty System)</h3>
+                <p>تجميع نقاط لكل طلب يقوم به العميل واستبدالها بوجبات أو خصومات تشجعهم على التكرار والشراء باستمرار.</p>
+            </div>
+            <div class="card">
+                <h3>منيو تفاعلي عالي السرعة</h3>
+                <p>عرض أطباق ابن عز الشهيرة بصور عالية الجودة، مع خيارات تخصيص الوجبة (حجم، إضافات، ملاحظات المطبخ).</p>
+            </div>
+            <div class="card">
+                <h3>دعم الدفع الإلكتروني والنقد</h3>
+                <p>توفير كافة وسائل الدفع المقبولة في مصر (فيزا، ماستركارد، محافط إلكترونية مثل فودافون كاش، أو الدفع عند الاستلام).</p>
+            </div>
+            <div class="card">
+                <h3>استضافة وسيرفرات فائقة السرعة</h3>
+                <p>حماية عالية وضمان عمل الموقع بنسبة 99.9% حتى مع الضغط العالي أثناء مواسم رمضان والأعياد.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Portfolio / Our Projects -->
+    <section class="container">
+        <h2 class="section-title">نماذج من أعمالنا ومشاريعنا السابقة</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="مشروع مطعم 1">
+                <div class="portfolio-info">
+                    <h4>تطبيق وموقع سلسلة مطاعم شرقية</h4>
+                    <p>نظام طلبات أونلاين وتوصيل فوري</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="مشروع مطعم 2">
+                <div class="portfolio-info">
+                    <h4>منيو تفاعلي لمطعم مشويات</h4>
+                    <p>ربط مع الكاشير وتتبع الطلبات</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="مشروع مطعم 3">
+                <div class="portfolio-info">
+                    <h4>منصة طلبات لمجموعة فروع</h4>
+                    <p>دعم تحديد الموقع وتوجيه الفروع</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call To Action -->
+        <div class="cta-section">
+            <h2>جاهزون لنقل سلسلة "ابن عز" إلى المستوى الرقمي القادم؟</h2>
+            <p style="margin: 15px 0;">دعنا نحدد موعداً لمناقشة التفاصيل وبدء تنفيذ المشروع.</p>
+            <a href="https://wa.me/201000000000" target="_blank" class="btn-main">تواصل معنا الآن عبر واتساب</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 - تم التطوير بواسطة فريقنا البرمجي</p>
+    </footer>
+
+</body>
+</html>
